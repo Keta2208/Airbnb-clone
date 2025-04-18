@@ -3,16 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+import { HashRouter as Router } from 'react-router-dom'; // ✅ Use HashRouter
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename="/airbnb-clone-react"> {/* Add basename for GitHub Pages */}
+    <Router> {/* ✅ No basename needed */}
       <App />
     </Router>
   </React.StrictMode>
 );
 
-// Log web vitals (optional)
 reportWebVitals();
